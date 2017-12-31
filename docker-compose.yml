@@ -1,0 +1,12 @@
+version: '2'
+services:
+  gitlab:
+    image: beginor/gitlab-ce:10.3.1-ce.0
+    ports:
+      - '5000:80'
+      - '22:22'
+    volumes:
+      - ./etc:/etc/gitlab
+      - ./log:/var/log/gitlab
+      - ./data:/var/opt/gitlab
+    restart: always
