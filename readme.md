@@ -34,7 +34,7 @@ gitlab_rails['time_zone'] = 'PRC'
 ```
 使配置生效
 ```shell
-gitlab-ctl reconfigure
+$ gitlab-ctl reconfigure
 ```
 
 浏览器打开 http://git.chudeer.com，设置初始密码，然后用root账号登录。
