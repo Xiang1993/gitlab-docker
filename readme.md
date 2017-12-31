@@ -1,9 +1,11 @@
-# 运行
+# docker下一键安装gitlab
+
+## 运行
 ```shell
 $ docker-compose up -d
 ```
 
-# nginx代理
+## nginx代理
 
 ```shell
 server {
@@ -21,7 +23,7 @@ server {
 }
 ```
 
-# 配置gitlab
+## 配置gitlab
 进入容器: 
 ```shell
 $ docker-compose exec gitlab bash
@@ -38,5 +40,4 @@ $ gitlab-ctl reconfigure
 ```
 
 浏览器打开 http://git.chudeer.com  设置初始密码，然后用root账号登录。
-
 
