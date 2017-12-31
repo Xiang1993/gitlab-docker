@@ -26,8 +26,9 @@ server {
 ```shell
 $ docker-compose exec gitlab bash
 ```
-编辑/etc/gitlab/gitlab.rb，修改下面2个项目：
+编辑/etc/gitlab/gitlab.rb，修改下面3个项目：
 ```
+external_url 'http://git.chudeer.com'
 gitlab_rails['gitlab_ssh_host'] = 'git.chudeer.com'
 gitlab_rails['time_zone'] = 'PRC'
 ```
@@ -35,3 +36,5 @@ gitlab_rails['time_zone'] = 'PRC'
 ```shell
 gitlab-ctl reconfigure
 ```
+
+浏览器打开 http://git.chudeer.com，设置初始密码，然后用root账号登录。
